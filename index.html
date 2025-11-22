@@ -9,7 +9,7 @@
   </head>
 </head>
 <body>
-    <header class="header">
+    <header id="header" class="header">
     <h2 class="logo"><a class="logo-link" href="https://warrenwebdev.com">MNTN</a></h2>
     <nav class="navbar">
       <a class="navlink" href="#">Equipment</a>
@@ -31,10 +31,10 @@
         <h1>Be Prepared For The Mountains And Beyond</h1>
         <p>scroll down <i class="fa-solid fa-arrow-down"></i></p>
         <aside class="progress">
-        <p class="social-icon">Start</p>
-        <p class="social-icon">01</p>
-        <p class="social-icon">02</p>
-        <p class="social-icon">03</p>
+        <p class="social-icon"><a class="progress-link"href="#header">Start</a></p>
+        <p class="social-icon"><a class="progress-link" href="#one">01</a></p>
+        <p class="social-icon"><a class="progress-link" href="#two">02</a></p>
+        <p class="social-icon"><a class="progress-link" href="#three">03</a></p>
         </aside>
     </div>
 
@@ -43,7 +43,7 @@
 
     <main>
 
-        <section class="one">
+        <section id="one" class="one">
             <p class="oh1">01</p>
             <div class="blurb">
             <hr class="horiz"><p class="hdr-detail">GET STARTED</p>
@@ -56,7 +56,7 @@
             <img class="img1" src="./hiker-on-trail.jpeg" alt="A hiker with an orange backpack on trail in high alpine terrain walking on a narrow trail in the fog.">
         </section>
 
-        <section class="two">
+        <section id="two" class="two">
             <img class="img2" src="./hiker-on-rock.jpeg" alt="A hiker sitting on a large rock formation with a scenic mountain view in the background.">
             <p class="oh2">02</p>
             <div class="blurb2">
@@ -69,7 +69,7 @@
             </div>
         </section>
 
-        <section class="three">
+        <section id="three" class="three">
             <p class="oh3">03</p>
             <div class="blurb3">
             <hr class="horiz"><p class="hdr-detail"> WHERE YOU GO IS THE KEY</p>
@@ -85,26 +85,29 @@
     </main>
 
     <footer>
-        <h3>MNTN</h3>
-        <p>Get out there & discover your next slope, mountain & destination</p>
-       
-        <div>
-             <h4>More on The Blog</h4>
-            <a href="#">About MNTN</a>
-            <a href="#">Contributoprs & Writers</a>
-            <a href="#">Write For Us</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Privacy Policy</a>
+        <div class="footer1">
+            <h3>MNTN</h3>
+            <p>Get out there & discover your next slope, mountain & destination!</p>
+            <p class="copyright">Copyright 2025 MNTN, inc. Terms & Privacy</p>
         </div>
 
-        <div>
-            <h4>More on MNTN</h4>
-            <a href="#">The Team</a>
-            <a href="#">Jobs</a>
-            <a href="#">Press</a>
+        <div class="footer2">
+            <h4 class="footer-hdr">More on The Blog</h4>
+            <a class="footer-link" href="#">About MNTN</a>
+            <a class="footer-link" href="#">Contributoprs & Writers</a>
+            <a class="footer-link" href="#">Write For Us</a>
+            <a class="footer-link" href="#">Contact Us</a>
+            <a class="footer-link" href="#">Privacy Policy</a>
         </div>
 
-        <p>Copyright 2023 MNTN, inc. Terms & Privacy</p>
+        <div class="footer3">
+            <h4 class="footer-hdr">More on MNTN</h4>
+            <a class="footer-link" href="#">The Team</a>
+            <a class="footer-link" href="#">Jobs</a>
+            <a class="footer-link" href="#">Press</a>
+        </div>
+
+        
     </footer>
 </body>
 </html>
