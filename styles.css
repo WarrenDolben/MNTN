@@ -6,26 +6,36 @@
   }
 
   html {
+    margin: 0;
+    padding: 0;
     font-size: 10px;
   }
+/*oveflow fix*/
+  .wrapper{
+    overflow-x: hidden;
+    position: relative;
+  }
+
 /*responsive images*/
   img {
     width: 100%;
     height: auto;
   }
 
-.header {
+#header {
     background-image: linear-gradient(to right, #355c66, #a8d8e3);
-    width: 100%;
+    width: 100vw;
     display: inline-flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 .socials {
     display: inline-flex;
     flex-direction: column;
-    margin: 5rem 0 0 0;
+    margin: 10rem 0 0 0;
     float: left;
 }
 
@@ -40,33 +50,57 @@
 
 .follow {
     transform: rotate(90deg);
+    font-weight: bold;
     margin-bottom: 2rem;
+    font-size: 1.2rem;
+    display: inline-block;
+    white-space: nowrap;
+    transform-origin: center;
 }
 
 .header-content {
     background-image: url(./hiker-in-mountains.jpeg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 30%; 
     text-align: center;
     color: #000;
     padding: 10rem 5rem;
-    margin: auto;
-    font-size: 1.6rem;
+    font-size: 1rem;
     box-shadow: inset 0 0 3rem 2rem #355c66;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    /* make the hero full-bleed */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.header-main {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; 
+    top: -5rem;
 }
 
 .progress {
+    font-size: 1.4rem;
     display: inline-flex;
     flex-direction: column;
-    margin: -5rem 0 0 0;
     float: right;
-    height: 15rem;
+    color: #fff;
+    position: relative;
+    top: 3rem;
 }
 
-.socials, .progress {
+.socials {
     font-size: 1.4rem;
     color: #fff;
+    display: inline-flex;
+    flex-direction: column;
+    float: left;
 }
 
 .social-icon:hover {
@@ -75,19 +109,12 @@
     cursor: pointer;
 }
 
-.hdr-detail {
-    color: gold;
-    font-weight: bold;
-    font-size: 1.5rem;
-    letter-spacing: .2rem;
-}
-
 .logo {
-    display: inline-block;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
-    margin: 2rem;
+    margin-left: .5rem;
+    margin-right: 5rem;
     cursor: pointer;
 }
 
@@ -97,16 +124,21 @@
 }
 
 .navbar {
+    font-size: 1rem;
+    width: 65%;
     display: inline-flex;
-    justify-content: center;
-    width: 50%;
-    font-size: 1.6rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
 }
 
 .navlink {
-    margin: 0 1.5rem;
     color: #fff;
     text-decoration: none;
+    width: 100%;
+    margin: 1rem;
+    white-space: nowrap;
 }
 
 .navlink:hover {
@@ -114,12 +146,19 @@
     opacity: 0.7;
 }
 
-.acc {
-    display: inline-block;
-    margin: 2rem;
-    font-size: 1.6rem;
+.fa-circle-user {
+    color: #fff;
+    margin-right: 1rem;
+    width: 2%;
+}
+
+.acc {    
+    font-size: .9rem;
     color: #fff;
     cursor: pointer;
+    width: 17.5%;
+    margin-right: 1rem;
+    text-decoration: none;
 }
 
 .acc:hover {
@@ -127,48 +166,160 @@
     opacity: 0.7;
 }
 
+main {
+    width: 100vw;
+    display: block;
+}
+
 .blurb {
     margin-top: -6.5rem;
-    display: inline-block;
-    width: 50%;
+    width:  85%;
+    float: left;
+    position: relative;
+    left: -12rem;
+    top: -10rem;
 }
 
 .blurb2 {
     margin-top: -6.5rem;
-    width: 50%;
+    width:  90%;
     float: right;
-    margin-right: 10rem;
+    position: relative;
+    right: -3rem;
+    top: -40rem;
 }
 
 .blurb3 {
-    margin-top: -1.8rem;
+    margin-top: -6.5rem;
+    width:  85%;
+    float: left;
+    position: relative;
+    top: -30rem;  
+    left: -12rem;  
+}
+
+.img1-container {
     display: inline-block;
-    width: 50%;
-    padding-bottom: 5rem;
+    width: 15%;
+    position: relative;
+    top: -13rem;
+    right: 10rem;
+}
+
+.img2-container {
+    display: inline-block;
+    width: 10%;
+    position: relative;
+    top: -6rem;
+    left: -4rem;
+}
+
+.img3-container { 
+    display: inline-block;
+    width: 15%;
+    position: relative;
+    top: -12.5rem; 
+    right: 10rem;   
+}
+
+.horizontal {
+    display: inline-block;
+    border: none;
+    background-color: gold;
+    height: .1rem;
+    width: 5%;
+    margin-bottom: .5rem;
+    position: relative;
+    left: 4rem;
 }
 
 .horiz {
     display: inline-block;
     border: none;
-    height: 1px;
     background-color: gold;
-    width: 3%;
-    margin-bottom: .3rem;
-    margin-right: .5rem;
-    margin-left: 10rem;
+    height: .1rem;
+    width: 5%;
+    margin-bottom: .5rem;
+    position: relative;
+    left: 12rem;
+    top: .5rem;
+}
+
+.horiz2 {
+    display: inline-block;
+    border: none;
+    background-color: gold;
+    height: .1rem;
+    width: 5%;
+    margin-bottom: .5rem;
+    position: relative;
+    left: 7rem;
+    top: 37.5rem;
+}
+
+.horiz3 {
+    display: inline-block;
+    border: none;
+    background-color: gold;
+    height: .1rem;
+    width: 5%;
+    margin-bottom: .5rem;
+    position: relative;
+    left: 12rem;
+    top: 20.5rem;
 }
 
 .hdr-detail {
     color: gold;
     font-size: 1.5rem;
+    font-weight: bold;
     letter-spacing: .2rem;
     display: inline-block;
-    margin-left: 0.5rem;
+    position: relative;
+    left: 13rem;
+    top: .5rem;
+    white-space: nowrap;
+    width: 80%;
+}
+
+.hdr-detail1 {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    display: inline-block;
+    position: relative;
+    left: 3rem;
+    top: -1.5rem;
+}
+
+.hdr-detail2 {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    display: inline-block;
+    position: relative;
+    left: 7.5rem;
+    top: 37.5rem;
+}
+
+.hdr-detail3 {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    display: inline-block;
+    position: relative;
+    left: 12.5rem;
+    top: 20.5rem;
+    white-space: nowrap;
+    width: 90%;
 }
 
 .one, .two, .three {
     background: #355c66;
-    padding: 3rem;
+    padding: 5rem;
 }
 
 .oh1, .oh2, .oh3 { 
@@ -176,25 +327,52 @@
     font-weight: bold;
     color: darkgray;
     opacity: .2;
-    margin-left: 5rem;
+}
+
+.oh1 {
+    position: relative;
+    top: -10rem;
+    left: -2.5rem;
 }
 
 .oh2 {
-    margin-left: 45.5%;
-    margin-top: 5rem;
+    position: absolute;
+    top: 85rem;
+    left: 20rem;
 }
 
 .oh3 {
-    margin-top: 10rem;
-    margin-bottom: -5rem;
+    position: relative;
+    top: -10rem;
+    left: -2.5rem;
 }
 
 .info {
     color: white;
     max-width: 50rem;
-    margin-bottom: 2rem;
     margin: 2rem auto auto 10rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    position: relative;
+    top: .5rem;
+}
+
+.info2 {
+    color: white;
+    max-width: 40rem;
+    margin: 2rem auto auto 10rem;
+    font-size: 1.4rem;
+    position: relative;
+    top: 37.5rem;
+    left: 0;
+}
+
+.info3 {
+    color: white;
+    max-width: 50rem;
+    margin: 2rem auto auto 10rem;
+    font-size: 1.4rem;
+    position: relative;
+    top: 20rem;
 }
 
 .read-more {
@@ -202,64 +380,74 @@
     font-size: 1.4rem;
     cursor: pointer;
     margin-left: 10rem;
+    position: relative;
+    top: .5rem;
+}
+
+.read-more2 {
+    color: gold;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-left: 10rem;
+    position: relative;
+    top: 37.5rem;
+    left: 0;
+}
+
+.read-more3 {
+    color: gold;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-left: 10rem;
+    position: relative;
+    top: 20.5rem;
 }
 
 .img1 {
-    height: 27.5%;
-    width: 17.5%;
-    display: inline-block;
-    position: absolute;
-    top: 60rem;
-    margin-left: 5rem;
-    margin-top: -25rem;
+    height: 27.5rem;
+    width: 17.5rem;  
 }
 
 .img2 {
-    height: 27.5%;
-    width: 17.5%;
-    display: inline-block;
-    position: absolute;
-    top: 67rem;
-    margin-left: 20rem;
+    height: 27.5rem;
+    width: 17.5rem;
 }
 
 .img3 {
-    height: 27.5%;
-    width: 17.5%;
-    display: inline-block;
-    position: absolute;
-    top: 95rem;
-    margin-left: 5rem;
+    height: 27.5rem;
+    width: 17.5rem;
 }
 
 footer {
     background-color: #355c66;
     color: #fff;
     padding: 2rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     display: inline-flex;
-    width: 100%;
-    line-height: 200%;
+    width: 100vw;
+    line-height: 175%;
     justify-content: space-between;
+    text-align: start; 
+    margin: 0 auto;
 }
 
 .footer1 {
-    width: 27.5%;
-    margin-right: 10rem;
-    margin-left: 15rem;
+    width: 35%;
+    margin-right: .5rem;
+    margin-left: .5rem;
 }
 
 .footer2 {
-    width: 25%;
-    margin-right: 10rem;
-    margin-left: 10rem;
+    width: 45%;
+    margin-right: 1rem;
+    margin-left: .5rem;
     flex-direction: column;
 }
 
 .footer3 {
-    width: 25%;
-    margin-left: 10rem;
-    margin-right: 0;
+    width: 20%;
+    margin-left: .5rem;
+    margin-right: .5rem;
     flex-direction: column;
 }
 
@@ -276,8 +464,391 @@ footer {
     display: block;
 }
 
+.footer-link:hover {
+    color: gold;
+    opacity: 0.7;
+}
+
 .footer-hdr {
     color: gold;
     font-weight: bold;
     font-size: 1.6rem;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+    .logo {
+        font-size: 2rem;
+        margin: 2rem;
+    }
+
+    .navbar {
+        width: 50%;
+        margin: auto;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .fa-circle-user {
+        margin: 2rem;
+    }
+
+    .acc {
+        font-size: 1.5rem;
+    }
+
+    .follow {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .horizontal {
+        position: relative;
+        left: 17.5rem;
+        top: .25rem;  
+    }
+
+    .hdr-detail1 {
+        font-size: 2rem;
+    }
+
+    .header-main {
+        font-size: 1.5rem;
+    }
+
+    .one {
+        padding: 10rem;
+    }
+
+    .oh1, .oh2, .oh3 {
+        font-size: 12.5rem;
+    }
+
+    .oh2 {
+        top: 92.5rem;
+        left: 41rem;
+    }
+
+    .oh3 {
+        left: 2rem;
+        top: -32rem;
+    }
+
+    .horiz {
+        top: -.25rem;
+        width: 2rem;
+        height: .2rem;
+        left: 11rem;
+    }
+
+    .horizontal {
+        height: .2rem;
+        left: 14rem;
+    }
+
+    .horiz2 {
+        height: .2rem;
+        width: 2rem;
+        position: relative;
+        left: 14rem;
+        top: 39.5rem;  
+    }
+
+    .horiz3 {
+        width: 2rem;
+        height: .2rem;
+        left: 10rem;
+        top: -2.5rem;
+    }
+
+    .hdr-detail {
+        font-size: 2rem;
+        left: 12rem;
+        top: -.25rem;
+    }
+
+    .hdr-detail2 {
+        font-size: 2rem;
+        left: 15rem;
+        top: 39.5rem;
+    }
+
+    .hdr-detail3 {
+        font-size: 2rem;
+        top: -2.5rem;
+        left: 11rem;
+    }
+
+    .blurb2 {
+        top: -57.5rem;
+        right: -15rem;  
+    }
+
+    .blurb3 {
+        left: -7rem;  
+    }
+
+    .info, .info2, .info3 {
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+
+    .info2, .info3 {
+        max-width: 30rem;
+    }
+
+    .info2 {
+        top: 40rem;
+    }
+
+    .info3 {
+        top: -2.5rem;
+    }
+
+    .read-more, .read-more2 {
+        font-size: 1.6rem;
+    }
+
+    .read-more2 {
+        top: 40rem;
+    }
+
+    .read-more3 {
+        top: -2rem;
+    }
+
+    .img1-container {
+        top: -18rem;
+        right: 10rem;
+    }
+
+    .img2-container {
+        left: 2rem;
+        top: -25rem;
+    }
+
+    .img3-container {
+        top: -35rem;
+        right: 14rem;   
+    }
+
+    .img1, .img2, .img3 {
+        height: 35rem;
+        width: 25rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+        line-height: 175%;
+    }
+
+    .footer1, .footer2, .footer3 {
+        width: auto;
+        margin: 3rem;
+    }
+
+    .copyright {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    .logo {
+        font-size: 2.5rem;
+        margin: 3rem;
+    }
+
+    .navbar {
+        width: 40%;
+        margin: auto;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .fa-circle-user {
+        margin: 3rem;
+    }
+
+    .acc {
+        font-size: 1.8rem;
+    }
+
+    .follow {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .socials {
+        position: relative;
+        top: -2.5rem;
+        font-size: 2rem;
+        background: #000;
+        opacity: .7;
+        padding: 6rem 0 1.5rem 0;
+        border-radius: 1.5rem;
+    }
+
+    .horizontal {
+        position: relative;
+        left: 20rem;
+        top: .5rem;
+        height: .2rem; 
+    }
+
+    .hdr-detail1 {
+        font-size: 2.5rem;
+    }
+
+    .header-main {
+        font-size: 1.75rem;
+    }
+
+    .progress {
+        font-size: 2rem;
+        background: #000;
+        opacity: .7;
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .oh1 {
+        font-size: 15rem;
+        top: -8rem;
+        left: 17.5rem;
+    }
+
+    .oh2 {
+        font-size: 15rem;
+        top: 115rem;
+        left: 70rem;
+    }
+
+    .oh3 {
+        font-size: 15rem;
+        left: 17rem;
+        top: -25rem;
+    }
+
+    .horizontal {
+        width: 2rem;
+    }
+
+    .horiz {
+        width: 2rem;
+        height: .2rem;
+        top: 0;
+        left: 32.5rem;
+    }
+
+    .horiz2 {
+        width: 2rem;
+        height: .2rem;
+        top: 29.5rem;
+        left: 50rem;
+    }
+
+    .horiz3 {
+        width: 2rem;
+        height: .2rem;
+        left: 32rem;
+        top: 2.5rem;
+    }
+
+    .hdr-detail {
+        font-size: 3rem;
+        left: 35rem;
+    }
+
+    .hdr-detail2 {
+        font-size: 3rem;
+        top: 30rem;
+        left: 52.5rem;
+    }
+
+    .hdr-detail3 {
+        font-size: 3rem;
+        left: 33rem;
+        top: 3rem;
+    }
+
+    .info {
+        font-size: 1.8rem;
+        line-height: 160%;
+        position: relative;
+        left: 20.5rem;
+        max-width: 40rem;
+    }
+
+    .info2 {
+        font-size: 1.8rem;
+        line-height: 160%;
+        position: relative;
+        left: 37.5rem;
+        top: 30rem;
+    }
+
+    .info3 {
+        font-size: 1.8rem;
+        line-height: 160%;
+        position: relative;
+        left: 20rem;
+        top: 3rem;
+        max-width: 40rem;
+    }
+
+    .read-more {
+        font-size: 1.8rem;
+        position: relative;
+        left: 20.5rem;
+    }
+
+    .read-more2 {
+        font-size: 1.8rem;
+        position: relative;
+        left: 37.5rem;
+        top: 30rem;
+    }
+
+    .read-more3 {
+        font-size: 1.8rem;
+        position: relative;
+        left: 20rem;
+        top: 3rem;
+    }
+
+    .img1, .img2, .img3 {
+        width: 30rem;
+        height: 45rem;
+    }
+
+    .img1-container {
+        top: -12.5rem;
+        right: 20rem;
+    }
+
+    .img2-container {
+        top: -12.5rem;
+        left: 18rem;
+    }
+
+    .img3-container {
+        top: -30rem;
+        right: 20rem;
+    }
+
+    footer {
+        font-size: 2rem;
+        line-height: 200%;
+    }
+
+    .footer1, .footer2, .footer3 {
+        margin: 5rem;
+        width: auto;
+    }
+
+    .copyright {
+        font-size: 1.7rem;
+    }
+
 }

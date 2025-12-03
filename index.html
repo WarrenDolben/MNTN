@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MNTN</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
 </head>
 <body>
+
+    <div class="wrapper">
+
     <header id="header" class="header">
     <h2 class="logo"><a class="logo-link" href="https://warrenwebdev.com">MNTN</a></h2>
-    <nav class="navbar">
+    <nav class="navbar center-block flex-direction-row justify-content-space-between align-items-center">
       <a class="navlink" href="#">Equipment</a>
       <a class="navlink" href="#">About Us</a>
       <a class="navlink" href="#">Blog</a>
@@ -21,15 +25,17 @@
 
     
 
-    <div class="header-content">
+    <div class="header-content align-middle">
         <aside class="socials">
         <p class="follow">Follow us</p>
         <i class="fa-brands fa-instagram social-icon"><a href="#"></a></i>
         <i class="fa-brands fa-x-twitter social-icon"><a href="#"></a></i>
         </aside>
-        <hr class="horiz"><p class="hdr-detail">A HIKING GUIDE</p>
+        <div class="header-main">
+        <hr class="horizontal"><p class="hdr-detail1">A HIKING GUIDE</p>
         <h1>Be Prepared For The Mountains And Beyond</h1>
         <p>scroll down <i class="fa-solid fa-arrow-down"></i></p>
+        </div>
         <aside class="progress">
         <p class="social-icon"><a class="progress-link"href="#header">Start</a></p>
         <p class="social-icon"><a class="progress-link" href="#one">01</a></p>
@@ -53,33 +59,39 @@
             </div>
             <p class="read-more">read more &emsp;<i class="fa-solid fa-arrow-right"></i></p>
             </div>
+            <div class="img1-container">
             <img class="img1" src="./hiker-on-trail.jpeg" alt="A hiker with an orange backpack on trail in high alpine terrain walking on a narrow trail in the fog.">
+            </div>
         </section>
 
         <section id="two" class="two">
+            <div class="img2-container">
             <img class="img2" src="./hiker-on-rock.jpeg" alt="A hiker sitting on a large rock formation with a scenic mountain view in the background.">
+            </div>
             <p class="oh2">02</p>
             <div class="blurb2">
-            <hr class="horiz"><p class="hdr-detail"> HIKING ESSENTIALS</p>
-            <div class="info">
+            <hr class="horiz2"><p class="hdr-detail2"> HIKING ESSENTIALS</p>
+            <div class="info2">
             <h2>Picking the right Hiking Gear</h2>
             <p>Choosing the appropriate hiking gear is crucial for a safe and enjoyable experience. Consider factors such as weather, terrain, and duration of your hike when selecting equipment.</p>
             </div>
-            <p class="read-more">read more &emsp;<i class="fa-solid fa-arrow-right"></i></p>
+            <p class="read-more2">read more &emsp;<i class="fa-solid fa-arrow-right"></i></p>
             </div>
         </section>
 
         <section id="three" class="three">
             <p class="oh3">03</p>
             <div class="blurb3">
-            <hr class="horiz"><p class="hdr-detail"> WHERE YOU GO IS THE KEY</p>
-            <div class="info">
+            <hr class="horiz3"><p class="hdr-detail3 "> WHERE YOU GO IS THE KEY</p>
+            <div class="info3">
             <h2>Understand Your Map & Timing</h2>
             <p>Understanding your map and timing is crucial for a safe and successful hike. Plan your route, check the weather, and estimate the time needed to complete your hike.</p>
             </div>
-            <p class="read-more">read more &emsp;<i class="fa-solid fa-arrow-right"></i></p>
+            <p class="read-more3">read more &emsp;<i class="fa-solid fa-arrow-right"></i></p>
             </div>
+            <div class="img3-container">
             <img class="img3" src="./compass-mtns.jpeg" alt="A hand holding a silver compass infront of some large, snow-crested mountains blurred in the background.">
+            </div>
         </section>
 
     </main>
@@ -94,7 +106,7 @@
         <div class="footer2">
             <h4 class="footer-hdr">More on The Blog</h4>
             <a class="footer-link" href="#">About MNTN</a>
-            <a class="footer-link" href="#">Contributoprs & Writers</a>
+            <a class="footer-link" href="#">Contributors & Writers</a>
             <a class="footer-link" href="#">Write For Us</a>
             <a class="footer-link" href="#">Contact Us</a>
             <a class="footer-link" href="#">Privacy Policy</a>
@@ -109,5 +121,6 @@
 
         
     </footer>
+    </div>
 </body>
 </html>
